@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    // 故意不放 "DOM"：shared 裡直接寫 window / document 會編譯失敗，
+    // 必須透過 config/platform 判斷後再使用，確保 web 與 reactNative 都能跑。
+    "lib": ["ES2020"],
+    "types": [],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}
